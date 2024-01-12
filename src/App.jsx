@@ -7,7 +7,7 @@ import Footer from './Footer.jsx'
 
 function App() {
  
-  const [openMobile, setMobileMenu] = useState(false);
+  const [openMobile, setMobileMenu] = useState(true);
 
   return (
     <>
