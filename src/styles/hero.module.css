@@ -1,0 +1,142 @@
+.hero{
+    position: relative;
+    display: grid;
+}
+
+.mobilepic{
+    width: 100%;
+    object-fit: cover;
+    content: url('/image-intro-mobile.jpg');
+}
+
+.content{
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr .5fr;
+
+}
+.top > div.desktoppic-container{
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.desktop-pic{
+    position: absolute;
+    display: none;
+    transform: translateY(20%);
+}
+.mobile-background{
+    display: block;
+    height:100%;
+    width:100%;
+    position: absolute;
+    background-image: url('/bg-pattern-intro-right-mobile.svg'), url('/bg-pattern-intro-left-mobile.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, top left;
+    background-size: 30%, 30%;
+}
+
+.desktop-background{
+    display: none;
+    height:100%;
+    width:100%;
+    position: absolute;
+    background-image: url('/bg-pattern-intro-left-desktop.svg'), url('/bg-pattern-intro-right-desktop.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, top right;
+    background-size: 15%, 30%;
+}
+
+.top{
+    position: relative;
+    display: grid;
+    background-color: hsl(256, 26%, 20%);
+    color: white;
+    padding: 4rem 2rem;
+    gap: 2rem;
+
+
+}
+
+.top > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    
+}
+
+.top > div > h1{
+    font-family: "DM Serif Display" ;
+    font-weight: 400;
+    z-index: 5;
+    font-size: 2.5rem;
+    line-height: 2.25rem;
+    text-align: center;
+}
+
+.top > div > p{
+    font-size: 1.125rem;
+    z-index: 5;
+    text-align: center;
+    color: var(--VeryLightGray);
+}
+
+.top > div > button{
+    padding: .5rem 2rem;
+    background: none;
+    color:white;
+    border: 1px solid white;
+    text-transform: uppercase;
+    z-index: 5;
+}
+
+.bottom{
+    
+    
+    padding: 4rem 2rem;
+}
+
+@media screen and (min-width: 800px) {
+
+    .mobilepic{
+        display: none;
+    }
+
+    .desktop-pic{
+        display: block;
+    }
+
+    .mobile-background{
+        display: none;
+    }
+
+    .desktop-background{
+        display: block;
+    }
+
+    .top{
+        padding: 7rem 7rem;
+        min-height: 600px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bottom{
+        padding: 7rem;
+    }
+    .top > div{
+        justify-content: center;
+        align-items: start;
+        
+    }
+
+    .top > div >h1{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .top > div > h1, .top > div > p{
+        text-align:start;
+        
+    }
+}

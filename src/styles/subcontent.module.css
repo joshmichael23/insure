@@ -1,0 +1,108 @@
+.subcontent{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.subcontent > h1{
+    font-family: "DM Serif Display" ;
+    font-weight: 400;
+    font-size: 2.25rem;
+    color: var(--DarkViolet);
+}
+.subcontent > section{
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.subcontent h2{
+    font-family: "DM Serif Display" ;
+    font-weight: 700;
+    color: var(--DarkViolet);
+}
+
+.subcontent p{
+    color: var(--DarkViolet);
+}
+
+.subcontent > section.lastSection{
+    margin: 5rem 0px;
+
+    padding: 2rem 2rem;
+    background-color: hsl(256, 26%, 20%);
+    
+    background-image: url('bg-pattern-how-we-work-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    color: white;
+}
+
+.lastSection > h3{
+    font-family: "DM Serif Display" ;
+    font-weight: 400;
+    font-size: 2.25rem;
+    
+}
+
+.lastSection > button{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: .5rem 1rem;
+}
+
+@media screen and (min-width: 800px) {
+    .subcontent{
+        padding:  7rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .subcontent > h1{
+        width: 100%;
+        text-align: start;
+        grid-column:1/4;
+        grid-row: 1/2;
+        font-size: 4rem;
+        
+    }
+
+    .subcontent h2{
+        font-size: 1.75rem;
+    }
+
+    .subcontent > section{
+        padding:0;
+        text-align: start;
+        grid-row: 2/3;
+        justify-items: start;
+    }
+
+    .subcontent > section.lastSection{
+        grid-column: 1/4;
+        grid-row:3/4;
+        width:100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: start;
+        padding: 4rem;
+        background-image: url('bg-pattern-how-we-work-desktop.svg');
+        background-size: contain;
+    }
+
+    .lastSection >  h3{
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        width:100%;
+    }
+    .lastSection >  h3 span{
+        display: block;
+    }
+
+    .lastSection > button{
+        justify-self: end;
+    }
+}
